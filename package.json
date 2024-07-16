@@ -1,0 +1,11 @@
+{
+  "name": "responsive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "node": "sass --watch sass/:dist/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

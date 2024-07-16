@@ -1,0 +1,52 @@
+@import "./colors";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f9f5ff;
+  font-family: "Inter", sans-serif;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-size: 12px;
+  background-color: $dark_color;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.padding {
+  padding: 5em 3em;
+}
+.contact {
+  width: 175px;
+  height: 45px;
+  margin-top: 45px;
+  color: $dark_color;
+  font-size: 20px;
+  background-color: $main_color;
+  border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.projects {
+  button {
+    padding: 5px;
+    color: $main_color;
+    background-color: transparent;
+    border-color: $main_color;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

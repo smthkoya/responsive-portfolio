@@ -1,0 +1,251 @@
+@import "./global";
+@import "./fonts";
+@import "./colors";
+@import "./mixins";
+
+header {
+  width: 100%;
+  height: 950px;
+
+  background-color: $dark_color;
+  nav {
+    width: 100%;
+    height: 40px;
+
+    @include dynamic-flex-row($jc: space-between);
+    @extend .padding;
+    img {
+      display: none;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    ul {
+      @include dynamic-flex-row;
+      gap: 1em;
+      li {
+        a {
+          font-size: 16px;
+          color: $secondary_color;
+        }
+      }
+    }
+  }
+  main {
+    @include dynamic-flex-row;
+    @extend .padding;
+    .text {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      p {
+        font-size: 18px;
+      }
+    }
+    img {
+      width: 40%;
+    }
+  }
+}
+.know_me {
+  width: 100%;
+  height: 700px;
+
+  @include dynamic-flex-column;
+  h2 {
+    font-size: 32px;
+  }
+  .about {
+    width: 100%;
+    @extend .padding;
+    @include dynamic-flex-row($jc: space-between);
+
+    .btn {
+      margin-left: 20%;
+      p {
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+    img {
+      width: 30%;
+    }
+  }
+}
+.projects {
+  width: 100%;
+  height: 1200px;
+  @include dynamic-flex-column;
+  gap: 10%;
+  padding: 5em 130px;
+  h2 {
+    font-size: 32px;
+  }
+  .cards {
+    @include dynamic-flex-row($jc: start);
+    gap: 40px;
+    flex-wrap: wrap;
+    h3 {
+      font-size: 20px;
+      margin: 16px 0;
+    }
+    .card-1 {
+      position: relative;
+      img {
+        opacity: 0.2;
+      }
+
+      .live {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        background-color: $main_color;
+        color: $dark_color;
+      }
+      .git {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .card {
+      width: 30%;
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+.contact-info {
+  width: 100%;
+  height: 300px;
+  @include dynamic-flex-column;
+  gap: 10px;
+  h3 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+footer {
+  width: 100%;
+  height: 300px;
+  gap: 70px;
+  @include dynamic-flex-column($ai: space-between);
+  @extend .padding;
+  .logo {
+    @include dynamic-flex-row($jc: space-between);
+    h2 {
+      font-size: 32px;
+    }
+    .social {
+      @include dynamic-flex-row;
+      gap: 30px;
+    }
+  }
+}
+@include tablet {
+  header {
+    height: 700px;
+  }
+  .know_me {
+    height: 600px;
+  }
+  .projects {
+    width: 100%;
+    padding: 5em 70px;
+
+    .cards {
+      gap: 20px;
+      .card {
+        width: 47%;
+        padding: 0;
+        img {
+          width: 100%;
+        }
+      }
+      .card-4 {
+        display: none;
+      }
+      .card-5 {
+        display: none;
+      }
+    }
+  }
+}
+@include mobile {
+  header {
+    nav {
+      ul {
+        display: none;
+      }
+      img {
+        display: block;
+      }
+    }
+    main {
+      .text {
+        width: 100%;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  .know_me {
+    .about {
+      @include dynamic-flex-column;
+      width: 100%;
+      .btn {
+        margin-left: 0;
+        margin-top: 40px;
+        width: 100%;
+        p {
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .projects {
+    height: 1500px;
+    gap: 2%;
+    .cards {
+      .card {
+        width: 100%;
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+  .contact-info {
+    height: 200px;
+    h3 {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+  }
+  footer {
+    .logo {
+      .social {
+        gap: 15px;
+      }
+    }
+  }
+}

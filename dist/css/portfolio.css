@@ -1,0 +1,320 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f9f5ff;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-size: 12px;
+  background-color: #0a0119;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.padding, footer, .know_me .about, header main, header nav {
+  padding: 5em 3em;
+}
+
+.contact {
+  width: 175px;
+  height: 45px;
+  margin-top: 45px;
+  color: #0a0119;
+  font-size: 20px;
+  background-color: #f9f5ff;
+  border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.contact:hover {
+  opacity: 0.7;
+}
+
+.projects button {
+  padding: 5px;
+  color: #f9f5ff;
+  background-color: transparent;
+  border-color: #f9f5ff;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 950px;
+  background-color: #0a0119;
+}
+header nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  display: none;
+}
+header nav h2 {
+  font-size: 24px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+header nav ul li a {
+  font-size: 16px;
+  color: #fafbff;
+}
+header main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header main .text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+header main .text p {
+  font-size: 18px;
+}
+header main img {
+  width: 40%;
+}
+
+.know_me {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.know_me h2 {
+  font-size: 32px;
+}
+.know_me .about {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.know_me .about .btn {
+  margin-left: 20%;
+}
+.know_me .about .btn p {
+  width: 100%;
+  font-size: 18px;
+}
+.know_me .about img {
+  width: 30%;
+}
+
+.projects {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 5em 130px;
+}
+.projects h2 {
+  font-size: 32px;
+}
+.projects .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.projects .cards h3 {
+  font-size: 20px;
+  margin: 16px 0;
+}
+.projects .cards .card-1 {
+  position: relative;
+}
+.projects .cards .card-1 img {
+  opacity: 0.2;
+}
+.projects .cards .card-1 .live {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  background-color: #f9f5ff;
+  color: #0a0119;
+}
+.projects .cards .card-1 .git {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.projects .cards .card {
+  width: 30%;
+}
+.projects .cards .card img {
+  border-radius: 20px;
+}
+
+.contact-info {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.contact-info h3 {
+  font-size: 20px;
+}
+.contact-info h2 {
+  font-size: 32px;
+}
+.contact-info h1 {
+  font-size: 40px;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+footer .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .logo h2 {
+  font-size: 32px;
+}
+footer .logo .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (width < 1300px) {
+  header {
+    height: 700px;
+  }
+  .know_me {
+    height: 600px;
+  }
+  .projects {
+    width: 100%;
+    padding: 5em 70px;
+  }
+  .projects .cards {
+    gap: 20px;
+  }
+  .projects .cards .card {
+    width: 47%;
+    padding: 0;
+  }
+  .projects .cards .card img {
+    width: 100%;
+  }
+  .projects .cards .card-4 {
+    display: none;
+  }
+  .projects .cards .card-5 {
+    display: none;
+  }
+}
+@media (width < 760px) {
+  header nav ul {
+    display: none;
+  }
+  header nav img {
+    display: block;
+  }
+  header main .text {
+    width: 100%;
+  }
+  header main img {
+    display: none;
+  }
+  .know_me .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .know_me .about .btn {
+    margin-left: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .know_me .about .btn p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .know_me .about img {
+    width: 70%;
+  }
+  .projects {
+    height: 1500px;
+    gap: 2%;
+  }
+  .projects .cards .card {
+    width: 100%;
+  }
+  .projects .cards .card img {
+    width: 280px;
+  }
+  .contact-info {
+    height: 200px;
+  }
+  .contact-info h3 {
+    font-size: 16px;
+  }
+  .contact-info h2 {
+    font-size: 20px;
+  }
+  .contact-info h1 {
+    font-size: 24px;
+  }
+  footer .logo .social {
+    gap: 15px;
+  }
+}
+
+/*# sourceMappingURL=portfolio.css.map */
